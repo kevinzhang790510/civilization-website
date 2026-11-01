@@ -30,3 +30,8 @@
 .era-photo img{display:block;width:100%;height:100%;object-fit:cover}
 .hero .era-photo{max-width:470px}
 .bookhero-illustrated .era-photo{max-width:420px}
+
+/* Home emblem uses a portrait crop; do not stretch or cut off the lower square. */
+.hero .era-photo{aspect-ratio:690/750;width:min(100%,390px);max-width:390px;overflow:hidden}
+.hero .era-photo img{object-fit:contain;width:100%;height:100%}
+@media(max-width:600px){.hero .era-photo{width:min(100%,390px)}}
