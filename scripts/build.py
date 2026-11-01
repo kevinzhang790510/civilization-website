@@ -40,6 +40,15 @@ def build():
         src = ROOT / 'web' / name
         require(src.is_file() and not src.is_symlink())
         shutil.copyfile(src, out / name)
+    # The author-approved original image assets were uploaded under a nested folder.
+    # Explicitly copy only the nine approved JPGs, never the entire upload folder.
+    marks = ROOT / '文明印记_网站原图素材包' / 'web' / 'marks'
+    mark_out = out / 'marks'
+    mark_out.mkdir()
+    for name in ('home.jpg', *(f'volume-{i}.jpg' for i in range(1, 9))):
+        src = marks / name
+        require(src.is_file() and not src.is_symlink())
+        shutil.copyfile(src, mark_out / name)
     content = json.dumps(chapters, ensure_ascii=False).replace('<', '\\u003c').replace('\u2028', '\\u2028').replace('\u2029', '\\u2029')
     (out / 'content.js').write_text('const CHAPTERS = ' + content + ';\n', encoding='utf-8')
     (out / '.nojekyll').touch()
