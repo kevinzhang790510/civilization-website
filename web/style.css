@@ -35,3 +35,7 @@
 .hero .era-photo{aspect-ratio:690/750;width:min(100%,390px);max-width:390px;overflow:hidden}
 .hero .era-photo img{object-fit:contain;width:100%;height:100%}
 @media(max-width:600px){.hero .era-photo{width:min(100%,390px)}}
+
+/* Exact dimensions of approved home.jpg: 300 x 413. Show complete square bottom. */
+.hero .era-photo{aspect-ratio:300/413 !important;width:min(100%,300px);max-width:300px;height:auto;min-height:0;overflow:visible}
+.hero .era-photo img{width:100%;height:100%;aspect-ratio:300/413;object-fit:contain;display:block}
