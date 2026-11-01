@@ -2,3 +2,25 @@
 
 .civilization-mark{width:100%;aspect-ratio:480/350;display:flex;align-items:center;justify-content:center;background:#ede7d8;overflow:hidden}.civilization-mark img{display:block;width:100%;height:100%;object-fit:contain}
 @media(max-width:520px){.civilization-mark{max-width:480px;margin-inline:auto}}
+
+
+/* Civilization emblem: invariant offset circle/square; era-specific materials. */
+.era-art{position:relative;min-width:0;aspect-ratio:420/336;display:grid;place-items:center;overflow:hidden;background:var(--era-bg);border:1px solid var(--era-border);box-shadow:inset 0 0 55px var(--era-shade)}
+.era-art svg{width:88%;height:92%;overflow:visible;filter:drop-shadow(0 2px 2px var(--era-shadow))}
+.era-emblem{fill:none;stroke:var(--era-stroke);stroke-width:2.5;vector-effect:non-scaling-stroke}
+.era-detail{fill:none;stroke:var(--era-detail);stroke-width:1.3;opacity:.55}
+.era-detail .guide{stroke-dasharray:2 8;opacity:.4}
+.era-detail .patina{stroke-width:2;opacity:.35}
+.era-stone{--era-bg:#c6ad85;--era-border:#a58d68;--era-stroke:#5d4935;--era-detail:#5d4935;--era-shade:#826f52;--era-shadow:#8b7859;background-image:radial-gradient(circle at 25% 28%,#ead6ac 0%,transparent 60%),repeating-linear-gradient(14deg,transparent 0 15px,#8e765018 16px,transparent 17px 29px)}
+.era-hellenic{--era-bg:#e7d2a8;--era-border:#bc9867;--era-stroke:#85542c;--era-detail:#9b6033;--era-shade:#d1ae7a;--era-shadow:#a17a54;background-image:radial-gradient(ellipse at 50% 50%,#f5e6c7,#d2b88d)}
+.era-bronze{--era-bg:#395e53;--era-border:#8e8664;--era-stroke:#d1b87c;--era-detail:#c9b67f;--era-shade:#152c2a;--era-shadow:#192e2a;background-image:radial-gradient(ellipse at 40% 35%,#6f8973,#234a43)}
+.era-manuscript{--era-bg:#e9d8ae;--era-border:#bea578;--era-stroke:#70513b;--era-detail:#9a7549;--era-shade:#a88e62;--era-shadow:#aa8c65;background-image:linear-gradient(135deg,#f3e5c5,#d8bd8c)}
+.era-sketch{--era-bg:#e5d0a5;--era-border:#c0a47c;--era-stroke:#715741;--era-detail:#806b54;--era-shade:#b39c75;--era-shadow:#ae9771;background-image:radial-gradient(circle,#f5e8cb,#d9c298)}
+.era-mechanical{--era-bg:#504e49;--era-border:#8f8069;--era-stroke:#d6ba80;--era-detail:#b6a17c;--era-shade:#201f1c;--era-shadow:#1d1b18;background-image:linear-gradient(125deg,#282a2b,#706b60 50%,#302f2b)}
+.era-digital{--era-bg:#10212a;--era-border:#36525a;--era-stroke:#72d5dd;--era-detail:#61acbc;--era-shade:#050e13;--era-shadow:#64e1e9;background-image:radial-gradient(circle at 50% 50%,#1c4955,#0b1920)}
+.era-cosmic{--era-bg:#201c1c;--era-border:#6e5942;--era-stroke:#edc77d;--era-detail:#d3a75f;--era-shade:#050303;--era-shadow:#d49a40;background-image:radial-gradient(circle at 50% 48%,#58412e,#1b1717 73%)}
+.hero .era-art{width:100%;max-width:470px;justify-self:end}
+.bookhero-illustrated{display:grid;grid-template-columns:minmax(0,1fr) minmax(270px,420px);gap:48px;align-items:center}
+.bookhero-illustrated .era-art{width:100%;justify-self:end}
+@media(max-width:800px){.bookhero-illustrated{grid-template-columns:minmax(0,1fr) minmax(220px,340px);gap:20px}}
+@media(max-width:600px){.bookhero-illustrated{grid-template-columns:1fr}.bookhero-illustrated .era-art{max-width:440px;justify-self:center}.hero .era-art{justify-self:center}}
