@@ -39,3 +39,8 @@
 /* Exact dimensions of approved home.jpg: 300 x 413. Show complete square bottom. */
 .hero .era-photo{aspect-ratio:300/413 !important;width:min(100%,300px);max-width:300px;height:auto;min-height:0;overflow:visible}
 .hero .era-photo img{width:100%;height:100%;aspect-ratio:300/413;object-fit:contain;display:block}
+
+/* Fix grid row clipping: 300x413 approved home image must retain full 413px height. */
+.hero .era-photo{display:block!important;aspect-ratio:auto!important;width:300px!important;height:413px!important;min-height:413px!important;max-height:none!important;overflow:visible!important;align-self:center;justify-self:end}
+.hero .era-photo img{display:block!important;width:300px!important;height:413px!important;max-height:none!important;object-fit:fill!important}
+@media(max-width:600px){.hero .era-photo{justify-self:center}}
