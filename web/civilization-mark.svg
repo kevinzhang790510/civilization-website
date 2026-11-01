@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 350" role="img" aria-labelledby="title desc">
-<title id="title">文明印记：圆与方</title><desc id="desc">取意于维特鲁威人的圆与正方形关系，圆心高于方形中心。</desc>
+<title id="title">文明印记</title><desc id="desc">一个圆与一个正方形构成的抽象几何印记。</desc>
 <rect width="480" height="350" fill="#ede7d8"/>
 <g stroke="#b6a889" stroke-width=".65" opacity=".38"><path d="M32 175H448M240 22V332"/><path d="M60 45H420M60 305H420" stroke-dasharray="2 8"/></g>
 <circle cx="240" cy="151" r="126" fill="none" stroke="#85785e" stroke-width="2.2"/>
