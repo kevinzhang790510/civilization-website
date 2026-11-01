@@ -36,7 +36,7 @@ def build():
         shutil.rmtree(out)
     out.mkdir()
     # Explicit allowlist: no recursive copy of repository, docs, tests, or private inputs.
-    for name in ('index.html', 'style.css', 'app.js'):
+    for name in ('index.html', 'style.css', 'app.js', 'civilization-mark.svg'):
         src = ROOT / 'web' / name
         require(src.is_file() and not src.is_symlink())
         shutil.copyfile(src, out / name)
